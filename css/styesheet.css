@@ -21,6 +21,7 @@
     min-height: 80vh;
     background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url(../img/pizza.png);
     background-size: cover;
+    background-position: center;
     font-weight: bolder;
   }
 
@@ -73,5 +74,42 @@
     border: 0.7px solid rgb(94, 70, 75);
     
   }
+/* Styles for phones (max-width: 767px) */
+@media (max-width: 767px) {
+  .section-1 {
+    min-height: 100vh;
+  }
+
+  .top-navbar li {
+    display: inline-block; /* Hide navigation links on phones */
+  }
+
+  #button-order {
+    display: block;
+    margin: 0 auto; /* Center the order button on phones */
+  }
+}
+
+/* Styles for tablets (min-width: 768px and max-width: 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-1 {
+    min-height: 80vh;
+  }
+
+  .top-navbar li {
+    display: inline-block; /* Show navigation links on tablets */
+  }
+}
+
+/* Styles for desktops (min-width: 992px) */
+@media (min-width: 992px) {
+  .section-1 {
+    min-height: 80vh;
+  }
+
+  .top-navbar li {
+    display: inline-block; /* Show navigation links on desktops */
+  }
+}
 
   
