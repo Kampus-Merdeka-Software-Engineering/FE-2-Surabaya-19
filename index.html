@@ -9,29 +9,140 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     <link rel="icon" type="image/x-icon" href="./img/Nazarick2.png">
     <link rel="stylesheet" href="./css/styesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
 </head>
 <body>
     <header>
-        <div class="top-navbar">
-            <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <!-- <li id="order-btn"><a href="#">Order Now</a></li> -->
-                <button id="button-order">Order Now</button>
-              </ul>
-              
-        </div>
-        <hr id="top-hr">
+       <!-- This div holds the hamburger icon -->
+<div class="menu-icon">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  
+  <!-- Your existing navbar -->
+  <div class="top-navbar">
+      <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#special-menu">Special Menu</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
+          <li id="order-btn"><button id="button-order">Order Now</button></li>
+      </ul>
+  </div>
+
     </header>
-   <div class="section-1">
+   <div id="home" class="section-1">
     <div class="social-media">
-        
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
     </div>
-    <p>Nazarick Restaurant</p>
-    <h3>"Unlock Unforgettable Moments by Tasting Something New."</h3>
+    <div class="text-container-1">
+        <p class="type-1">Nazarick Restaurant</p>
+        <h1>"Unlock Unforgettable Moments by Tasting Something New."</h1>
+        <p class="type-1">Our Restaurant is filled with passion and love for serving good-quality food and with best ingridients avaliable</p>
+    </div>
+   </div>
+   <div id="gallery" class="gallery">
+       <h1 class="section-title">Gallery</h1>
+        <div class="gallery-container-1">
+            <img src="./img/cafe1.jpg" alt="cafe interior 1">
+            <div class="gallery-text-1">
+                <h1 class="gallery-title">Unleash The Adventure of Aroma</h1>
+                <p>Welcome to our family restaurant Nazarick, where every plate is delivered with the highest care and worth every rupiah you spend. We choose our ingredients that are organic and fresh, without chemicals.
+                Our chefs are highly skilled and passionate about creating delicious dishes that will satisfy your taste buds. From traditional Indonesian cuisine to fusion dishes, we have something for everyone.</p>
+                <!-- <button class="view-menu">View Menu >></button> -->
+            </div>
+        </div>
+
+        <div id="gc2" class="gallery-container-1">
+            <div class="gallery-text-1">
+                <h1 class="gallery-title">Unleash The Adventure of Aroma</h1>
+                <p>Welcome to our family restaurant Nazarick, where every plate is delivered with the highest care and worth every rupiah you spend. We choose our ingredients that are organic and fresh, without chemicals.
+                    Our chefs are highly skilled and passionate about creating delicious dishes that will satisfy your taste buds. From traditional Indonesian cuisine to fusion dishes, we have something for everyone.</p>
+                    <!-- <button class="view-menu">View Menu >></button> -->
+                </div>
+            <img src="./img/cafe2-resi.jpg" alt="cafe interior 1">
+        </div>
+   </div>
+   
+   <div class="special-menu-container">
+    <h1 class="section-title">Special Menu</h1>
+    <div id="special-menu" class="special-menu">
+        <div class="photo">
+            <img src="./asset/1.png" alt="">
+        </div>
+        <div class="photo">
+            <img src="./asset/2.png" alt="">
+        </div>
+        <div class="photo">
+            <img src="./asset/3.png" alt="">
+        </div>
+        <div class="photo">
+            <img src="./asset/4.png" alt="">
+        </div>
+        <div class="photo">
+            <img src="./asset/5.png" alt="">
+        </div>
+        <div class="photo">
+            <img src="./asset/6.png" alt="">
+        </div>
+    </div>
    </div>
 
+   <footer id="contact-us" class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">payment options</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online order</h4>
+                <ul>
+                    <li><a href="#">order now</a></li>
+                    <li><a href="#">reserve room</a></li>
+                    <li><a href="#">become a member</a></li>
+        
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+ 
+
+
 </body>
+<script>
+    document.querySelector('.menu-icon').addEventListener('click', function() {
+    this.classList.toggle('change');
+    document.querySelector('.top-navbar ul').classList.toggle('show');
+});
+</script>
 </html>

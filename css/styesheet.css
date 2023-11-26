@@ -1,115 +1,362 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: white;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  header{
-    position: -webkit-sticky;
-    position:sticky;
-    top: 0;
-  }
-  
-  body{
-    min-height: 200vh;
-    background-color: rgb(33,25,27);
-  }
-  .section-1{
-    min-height: 80vh;
-    background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url(../img/pizza.png);
-    background-size: cover;
-    background-position: center;
-    font-weight: bolder;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+header{
+  position: -webkit-sticky;
+  position:sticky;
+  top: 0;
+} 
 
- .top-navbar{
-  text-align: center;
-  font-size: 0.7rem;
-  font-family: 'Roboto', sans-serif;
- }
-  .top-navbar ul {
-    background-color: rgb(33,25,27);
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .top-navbar li {
-   display: inline-block;
-  }
-  
-  .top-navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 18px 20px;
-    text-decoration: none;
-  }
-  
-  .top-navbar li a:hover {
-    background-color:  rgb(49, 49, 49);
-  }
-  #button-order{
-    background-color: rgb(137,92,61);
-    margin-top: 0.2rem;
-    margin-right: 2rem;
-    padding: 12px 16px;
-    float: right;
-    border: none;
-    color: white;
-    border-radius: 8px;
-    
-  }
-  #button-order:hover {
-    background-color: hsl(17, 35%, 35%); /* Change color on hover */
-    color: rgb(178, 178, 178);
+body{
+  min-height: 360vh;
+  background-color: rgb(33,25,27);
+}
+.section-1{
+  min-height: 80vh;
+  background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url(../img/pizza.png);
+  background-size: cover;
+  font-weight: bolder;
 }
 
-  #top-hr{
-    border: 0.7px solid rgb(94, 70, 75);
-    
-  }
-/* Styles for phones (max-width: 767px) */
-@media (max-width: 767px) {
-  .section-1 {
-    min-height: 100vh;
-  }
-
-  .top-navbar li {
-    display: inline-block; /* Hide navigation links on phones */
-  }
-
-  #button-order {
-    display: block;
-    margin: 0 auto; /* Center the order button on phones */
-  }
+/* Common styles for the navbar */
+.top-navbar {
+background-color: rgb(33, 25, 27);
 }
 
-/* Styles for tablets (min-width: 768px and max-width: 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .section-1 {
-    min-height: 80vh;
-  }
-
-  .top-navbar li {
-    display: inline-block; /* Show navigation links on tablets */
-  }
+.top-navbar ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+gap:2rem;
+justify-content: center;
+align-items: center;
+padding: 10px;
 }
 
-/* Styles for desktops (min-width: 992px) */
-@media (min-width: 992px) {
-  .section-1 {
-    min-height: 80vh;
-  }
-
-  .top-navbar li {
-    display: inline-block; /* Show navigation links on desktops */
-  }
+.top-navbar li {
+display: inline-block;
+margin-right: 20px;
 }
 
-  
+.top-navbar li:last-child {
+margin-right: 0;
+}
+
+.top-navbar li a {
+color: white;
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+.top-navbar li a:hover {
+color: rgb(178, 178, 178);
+}
+
+#button-order {
+background-color: rgb(137, 92, 61);
+border: none;
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#button-order:hover {
+background-color: hsl(17, 35%, 35%);
+color: rgb(178, 178, 178);
+}
+.type-1{
+font-size: 1rem;
+font-weight: 500;
+width: 70ch;
+}
+
+.social-media{
+display: inline-flex;
+flex-direction: column;
+margin-left: 3rem;
+margin-top: 4rem;
+gap: 1.4rem;
+/* border: 2px solid hsl(17, 35%, 35%) ; */
+}
+.social-media a{
+background-color:hsl(17, 35%, 35%);
+text-align: center;
+color:hsl(16, 73%, 91%);
+text-decoration: none;
+border-radius: 50%;
+font-size: 2.3rem;
+}
+.text-container-1{
+margin-left: 7.2rem;
+display: inline-flex;
+gap: 1.2rem;
+flex-direction: column;
+/* border: 1px solid white; */
+}
+.text-container-1 h1{
+font-size:2.2rem ;
+width: 20ch;
+}
+.gallery{
+margin-top: 10vh;
+
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+.gallery-container-1{
+background-color: rgb(16,16,17);
+display: flex;
+justify-content:center;
+margin-top: 2rem;
+/* margin-left: 1.2rem; */
+gap: 1.4rem;
+}
+.gallery-text-1{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+}
+.gallery-text-1 p{
+width: 70ch;
+}
+.section-title{
+text-align: center;
+}
+.gallery-title{
+color: rgb(137,92,61);
+}
+#gc2{
+background-color: rgb(37,36,35);
+}
+
+.special-menu-container{
+margin-top: 20vh;
+background-color:rgb(16,16,17) ;
+}
+.special-menu {
+display: grid;
+grid-template-columns: repeat(3,1fr); /* 3 columns for 6 photos */
+grid-gap: 0.5vw;
+justify-content: space-evenly;
+padding: 0.5vw;
+}
+.special-menu img{
+background-size: cover;
+background-position: center;
+padding: 2vw;
+font-size: 0.8em;
+box-sizing: border-box;
+}
+
+
+.container{
+max-width: 1170px;
+margin:auto;
+}
+.row{
+display: flex;
+flex-wrap: wrap;
+}
+ul{
+list-style: none;
+}
+.footer{
+background-color: rgb(26,22,21);
+  padding: 70px 0;
+}
+.footer-col{
+ width: 25%;
+ padding: 0 15px;
+}
+.footer-col h4{
+font-size: 18px;
+color: rgb(137,92,61);
+text-transform: capitalize;
+margin-bottom: 35px;
+font-weight:bold;
+position: relative;
+}
+.footer-col h4::before{
+content: '';
+position: absolute;
+left:0;
+bottom: -10px;
+background-color: rgb(139,134,131);
+height: 2px;
+box-sizing: border-box;
+width: 50px;
+}
+.footer-col ul li:not(:last-child){
+margin-bottom: 10px;
+}
+.footer-col ul li a{
+font-size: 16px;
+text-transform: capitalize;
+color: #ffffff;
+text-decoration: none;
+font-weight: 300;
+color: #bbbbbb;
+display: block;
+transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+color: #ffffff;
+padding-left: 8px;
+}
+.footer-col .social-links a{
+display: inline-block;
+height: 40px;
+width: 40px;
+background-color: rgb(137,92,61);
+margin:0 10px 10px 0;
+text-align: center;
+line-height: 40px;
+border-radius: 50%;
+color: #ffffff;
+transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+color: #24262b;
+background-color: #ffffff;
+}
+
+
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+header{
+  position: static;
+}
+
+.section-1 {
+  /* min-height: 40vh; */
+  background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5)), url(../img/pizza-resize.jpg);
+}
+.social-media {
+  margin-left: 0.8rem;
+
+
+}
+.social-media a {
+  font-size:1.5rem;
+}
+.text-container-1{
+  margin-left: 2.2rem;
+}
+.text-container-1 h1{
+  font-size: 1.5rem;
+  width: 14ch;
+}
+.type-1{
+
+  width: 17ch;
+}
+.top-navbar ul {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 14px; /* Adjust font size for smaller screens */
+}
+
+.top-navbar ul.show {
+  display: flex;
+}
+
+.top-navbar li {
+  display: block;
+  margin: 5px 0;
+}
+
+#order-btn {
+  margin-top: 10px;
+}
+
+.menu-icon {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(113, 88, 96);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first and third bars to create the 'X' close icon when clicked */
+.change .bar:first-child {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.change .bar:last-child {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.gallery-container-1 img{
+  width:400px;
+  height: 200px;
+  display: block;
+}
+.gallery-container-1{
+  margin: 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+}
+.gallery-text-1 p{
+  width: 40ch;
+  font-size: smaller;
+}
+#gc2 img{
+order: -1;
+}
+.gallery-text-1 h1{
+text-align: center;
+}
+
+.special-menu-container{
+margin-top: 5vh;
+}
+.special-menu{
+display: grid;
+grid-template-columns: repeat(2,1fr); /* 3 columns for 6 photos */
+grid-gap: 0.5vw;
+justify-content: space-evenly;
+padding: 0.5vw;
+}
+.special-menu img{
+width: 180px;
+}
+
+
+}
+@media(max-width: 767px){
+.footer-col{
+  width: 50%;
+  margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+.footer-col{
+  width: 100%;
+}
+}
+
+
+
