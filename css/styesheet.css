@@ -296,7 +296,7 @@ ul {
 
 .about .row .card .content {
   margin-bottom: 0.8rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 100;
   line-height: 1.6;
   display: none;
@@ -449,9 +449,6 @@ ul {
   .about .row .content h3 {
     margin-top: 1rem;
     font-size: 2rem;
-  }
-  .about .row .content p {
-    font-size: 1.6rem;
   }
 }
 @media (max-width: 767px) {
