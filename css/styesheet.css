@@ -22,7 +22,6 @@ header {
 }
 
 body {
-  min-height: 360vh;
   background-color: rgb(33, 25, 27);
 }
 .section-1 {
@@ -250,17 +249,24 @@ ul {
 }
 
 /* About Section */
-.about {
-  padding: 4rem 7% 1.4rem;
+.about,
+.profile {
+  padding: 4rem 7% 1rem;
 }
 
-.about h2 {
+.about h2,
+.profile h2,
+.visi h2,
+.company h2 {
   text-align: center;
   font-size: 2.6rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
-.about h2 span {
+.about h2 span,
+.profile h2 span,
+.visi h2 span,
+.company h2 span {
   color: var(--primary);
 }
 
@@ -324,6 +330,86 @@ ul {
 
 .about .row #ch:checked ~ label {
   display: none;
+}
+
+/* profile*/
+.profile h2 {
+  margin-bottom: 1rem;
+}
+.company h2,
+.visi h2 {
+  margin-bottom: 1rem;
+}
+
+.profile p {
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+.company p,
+.visi p {
+  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  margin-bottom: 5rem;
+}
+
+.profile .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile .row .profile-card {
+  text-align: center;
+  background: var(--primary);
+  border-radius: 12px;
+}
+
+.profile .row .profile-card img {
+  border-radius: 50%;
+  width: 80%;
+}
+
+.profile .row .profile-card .profile-card-title {
+  margin-top: 1rem auto 0.5rem;
+  font-size: 1rem;
+}
+.profile .row .profile-card .profile-card-job {
+  margin-top: 1rem auto 0.5rem;
+  font-size: 1rem;
+}
+
+.profile .social-links {
+  display: flex;
+  justify-content: center;
+}
+.profile .social-links a {
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+  border-radius: 50%;
+  color: #333;
+  background-color: var(--primary);
+  text-decoration: none;
+  transition: 0.6s;
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+}
+.profile .social-links a:hover {
+  transform: rotate(360deg);
+  background-color: var(--bg);
+  color: #fff;
 }
 
 /* Media query for responsiveness */
