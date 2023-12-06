@@ -1,7 +1,7 @@
 const API_BASE_URL = "https:/be-2-surabaya-19-production.up.railway.app";
 
 async function fetchMenus() {
-  const menuContainer = document.getElementById("menus-container");
+  const menuContainer = document.getElementById("menu-container");
   try {
     const response = await fetch(`${API_BASE_URL}/menus`);
     const menus = await response.json();
