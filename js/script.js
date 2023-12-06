@@ -10,11 +10,11 @@ async function fetchMenus() {
     const menuListElement = menus.map((menu) => {
       return `
       <div class="menu-section">
-      <img src="./asset/1.png" alt="" class="menu-img" />
+      <img src="${item.image}" alt="" class="menu-img" />
       <div class="text-section">
-        <h4>Nasi Goreng Babi</h4>
-        <p>Nasi goreng dengan mentega</p>
-        <h4>Rp.30000</h4>
+        <h4>${item.name}</h4>
+        <p>${item.price}</p>
+        <h4>${item.price}</h4>
       </div>
       <button id="psn">Tambahkan</button>
     </div>
