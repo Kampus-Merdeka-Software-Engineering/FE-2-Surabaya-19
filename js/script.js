@@ -21,7 +21,7 @@ async function fetchMenus() {
       `;
     });
 
-    bookContainer.innerHTML = menuListElement;
+    menuContainer.innerHTML = menuListElement;
   } catch (err) {
     console.error(err);
   }
