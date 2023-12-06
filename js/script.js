@@ -13,7 +13,7 @@ async function fetchMenus() {
       <img src="${item.image}" alt="" class="menu-img" />
       <div class="text-section">
         <h4>${item.name}</h4>
-        <p>${item.price}</p>
+        <p>${item.desc}</p>
         <h4>${item.price}</h4>
       </div>
       <button id="psn">Tambahkan</button>
