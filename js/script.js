@@ -1,5 +1,4 @@
-const API_BASE_URL =
-  "https://mysql://root:16cB52dGFcG3DH6B1Dcfb122-3e5FCga@monorail.proxy.rlwy.net:40172/railway";
+const API_BASE_URL = "https:/be-2-surabaya-19-production.up.railway.app";
 
 async function fetchBooks() {
   const bookList = document.getElementById("books-list");
