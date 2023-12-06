@@ -7,7 +7,7 @@ async function fetchMenus() {
     const menus = await response.json();
     console.log(menu);
 
-    const menuListElement = menus.map((menu) => {
+    const menuListElement = menus.map((item) => {
       return `
       <div class="menu-section">
       <img src="${item.image}" alt="" class="menu-img" />
