@@ -1,17 +1,27 @@
 const API_BASE_URL = "https:/be-2-surabaya-19-production.up.railway.app";
 
-async function fetchBooks() {
-  const bookList = document.getElementById("books-list");
+async function fetchMenus() {
+  const menuContainer = document.getElementById("menus-container");
   try {
-    const response = await fetch(`${API_BASE_URL}/books`);
-    const books = await response.json();
-    const bookListElement = books.map((book) => {
+    const response = await fetch(`${API_BASE_URL}/menus`);
+    const menus = await response.json();
+    console.log(menu);
+
+    const menuListElement = menus.map((menu) => {
       return `
-        <li>${book.title} by ${book.author}</li>
+      <div class="menu-section">
+      <img src="./asset/1.png" alt="" class="menu-img" />
+      <div class="text-section">
+        <h4>Nasi Goreng Babi</h4>
+        <p>Nasi goreng dengan mentega</p>
+        <h4>Rp.30000</h4>
+      </div>
+      <button id="psn">Tambahkan</button>
+    </div>
       `;
     });
 
-    bookList.innerHTML = bookListElement;
+    bookContainer.innerHTML = menuListElement;
   } catch (err) {
     console.error(err);
   }
