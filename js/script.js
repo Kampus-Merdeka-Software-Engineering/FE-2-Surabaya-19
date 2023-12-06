@@ -27,23 +27,4 @@ async function fetchMenus() {
   }
 }
 
-fetchBooks();
-
-async function addBook() {
-  const title = document.getElementById("book-title").value;
-  const author = document.getElementById("book-author").value;
-
-  try {
-    await fetch(`${API_BASE_URL}/books`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ title, author }),
-    });
-  } catch (err) {
-    console.error(err);
-  } finally {
-    fetchBooks();
-  }
-}
+fetchMenus();
