@@ -12,7 +12,7 @@ async function fetchMenus() {
     const menus = await response.json();
     console.log(menus); // Fix the typo here
 
-    const menuListElement = menus.map((menu) => {
+    const menuContainerElement = menus.map((menu) => {
       return `
         <div class="menu-section">
           <img src="${menu.image}" alt="" class="menu-img" />
@@ -26,7 +26,7 @@ async function fetchMenus() {
       `;
     });
 
-    menuContainer.innerHTML = menuListElement;
+    menuContainer.innerHTML = menuContainerElement;
   } catch (err) {
     console.error(err);
   }
