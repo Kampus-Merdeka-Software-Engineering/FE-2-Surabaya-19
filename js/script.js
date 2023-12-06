@@ -1,6 +1,6 @@
 document.querySelector(".menu-icon").addEventListener("click", function () {
   this.classList.toggle("change");
-  doument.querySelector(".top-navbar ul").classList.toggle("show");
+  document.querySelector(".top-navbar ul").classList.toggle("show");
 });
 
 const API_BASE_URL = "https:/be-2-surabaya-19-production.up.railway.app";
