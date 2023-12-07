@@ -228,5 +228,10 @@
     </footer>
   </body>
 
-  <script src="./js/script.js"></script>
+  <script>
+    document.querySelector(".menu-icon").addEventListener("click", function () {
+      this.classList.toggle("change");
+      document.querySelector(".top-navbar ul").classList.toggle("show");
+    });
+  </script>
 </html>
