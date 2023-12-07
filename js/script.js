@@ -17,8 +17,7 @@ async function fetchMenus() {
             <h4 id="menu-price">${menu.price}</h4>
           </div>
           <button id="psn">Tambahkan</button>
-        </div>
-      `;
+        </div>`;
     });
 
     menuContainer.innerHTML = menuContainerElement;
