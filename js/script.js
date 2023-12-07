@@ -1,13 +1,4 @@
-document.querySelector(".menu-icon").addEventListener("click", function () {
-  this.classList.toggle("change");
-  document.querySelector(".top-navbar ul").classList.toggle("show");
-});
-
-<<<<<<< HEAD
 const API_BASE_URL = "https://be-2-surabaya-19-production.up.railway.app";
-=======
-const API_BASE_URL = 'https://be-2-surabaya-19-production.up.railway.app';
->>>>>>> 47319392d29864555b898fcc4cc4c3885ac54e36
 
 async function fetchMenus() {
   const menuContainer = document.getElementById("menu-cont");
