@@ -15,11 +15,11 @@ async function fetchMenus() {
     const menuContainerElement = menus.map((menu) => {
       return `
         <div class="menu-section">
-          <img src="${menus.image}" alt="" class="menu-img" />
+          <img src="${menu.image}" alt="" class="menu-img" />
           <div class="text-section">
-            <h4>${menus.name}</h4>
-            <p>${menus.desc}</p>
-            <h4>${menus.price}</h4>
+            <h4>${menu.name}</h4>
+            <p>${menu.desc}</p>
+            <h4>${menu.price}</h4>
           </div>
           <button id="psn">Tambahkan</button>
         </div>
