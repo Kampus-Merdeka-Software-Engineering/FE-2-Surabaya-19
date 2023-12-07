@@ -10,14 +10,15 @@ async function fetchMenus() {
     const menuContainerElement = menus.map((menu) => {
       return `
         <div class="menu-section">
-          <img src="${menu.image}" alt="" class="menu-img" id="menu-image"/>
+          <img src="${menu.image}" alt="" class="menu-img"/>
           <div class="text-section">
             <h4 id="menu-name">${menu.name}</h4>
             <p id="menu-desc">${menu.desc}</p>
             <h4 id="menu-price">${menu.price}</h4>
           </div>
           <button id="psn">Tambahkan</button>
-        </div>`;
+        </div>
+          `;
     });
 
     menuContainer.innerHTML = menuContainerElement;
