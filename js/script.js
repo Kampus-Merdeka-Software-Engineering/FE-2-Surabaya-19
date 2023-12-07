@@ -18,7 +18,7 @@ async function fetchMenus() {
           </div>
           <button id="psn">Tambahkan</button>
         </div>
-      `;
+      `
     });
 
     menuContainer.innerHTML = menuContainerElement;
