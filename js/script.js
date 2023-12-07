@@ -3,7 +3,7 @@ document.querySelector(".menu-icon").addEventListener("click", function () {
   document.querySelector(".top-navbar ul").classList.toggle("show");
 });
 
-const API_BASE_URL = "https:/be-2-surabaya-19-production.up.railway.app";
+const API_BASE_URL = 'https://be-2-surabaya-19-production.up.railway.app';
 
 async function fetchMenus() {
   const menuContainer = document.getElementById("menu-container");
