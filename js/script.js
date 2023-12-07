@@ -12,13 +12,12 @@ async function fetchMenus() {
         <div class="menu-section">
           <img src="${menu.image}" alt="" class="menu-img"/>
           <div class="text-section">
-            <h4 id="menu-name">${menu.name}</h4>
-            <p id="menu-desc">${menu.desc}</p>
-            <h4 id="menu-price">${menu.price}</h4>
+            <h4>${menu.name}</h4>
+            <p>${menu.desc}</p>
+            <h4>${menu.price}</h4>
           </div>
           <button id="psn">Tambahkan</button>
-        </div>
-          `;
+        </div>`;
     });
 
     menuContainer.innerHTML = menuContainerElement;
