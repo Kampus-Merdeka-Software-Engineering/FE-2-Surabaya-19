@@ -14,7 +14,7 @@ async function fetchMenus() {
           <div class="text-section">
             <h4>${menu.name}</h4>
             <p>${menu.desc}</p>
-            <h4>${menu.price}</h4>
+            <h4>Rp. ${menu.price}</h4>
           </div>
           <button id="psn">Tambahkan</button>
         </div>`;
