@@ -1,6 +1,7 @@
 const API_BASE_URL = "https://be-2-surabaya-19-production.up.railway.app";
 
-async function addMenu(name, desc, price, image) {
+// Function to add item to cart
+async function addToCart(name, desc, price, image) {
   try {
     const response = await fetch(`${API_BASE_URL}/menus`, {
       method: "POST",
@@ -9,45 +10,48 @@ async function addMenu(name, desc, price, image) {
       },
       body: JSON.stringify({ name, desc, price, image }),
     });
-
     if (!response.ok) {
-      throw new Error(`Failed to add menu: ${response.statusText}`);
+      throw new Error("Failed to add item to cart");
     }
-  } catch (err) {
-    console.error(err);
-  } finally {
-    fetchMenus();
+    console.log("Item added to cart:", response.json());
+    // Update UI or perform other actions after adding to cart
+  } catch (error) {
+    console.error("Error adding item to cart:", error);
   }
 }
 
-async function fetchMenus() {
-  const menuContainer = document.getElementById("menu-cont");
+async function renderMenus() {
+  const menusection = document.getElementById("menu-cont"); // Update to menu-container
   try {
-    const response = await fetch(`${API_BASE_URL}/menus`);
+    const response = await fetch(`${API_BASE_URL}/menus`); // Assuming /api/food is the correct endpoint
     if (!response.ok) {
-      throw new Error(`Failed to fetch menus: ${response.statusText}`);
+      throw new Error("Failed to fetch data");
     }
-
     const menus = await response.json();
 
-    const menuContainerElement = menus.map((menu) => {
-      return `
-        <div class="menu-section">
-          <img src="${menu.image}" alt="" class="menu-img"/>
-          <div class="text-section">
-            <h4>${menu.name}</h4>
-            <p>${menu.desc}</p>
-            <h4>Rp. ${menu.price}</h4>
+    // Generating HTML content using map
+    const htmlContent = menus
+      .map(
+        (menu) => `
+          <div class="menu-section">
+              <img src="${menu.image}" alt="" class="menu-img">
+              <div class="text-section">
+                  <h4>${menu.name}</h4>
+                  <p>${menu.desc}</p>
+                  <h4>Rp.${menu.price}</h4>
+              </div>
+              <button id = "psn" class="psn">Tambahkan</button>
+              
           </div>
-          <button class="psn-btn">Tambahkan</button>
-        </div>`;
-    });
+      `
+      )
+      .join("");
 
-    menuContainer.innerHTML = menuContainerElement.join("");
-  } catch (err) {
-    console.error(err);
+    menusection.innerHTML = htmlContent; // Set the generated HTML content to menu-container
+  } catch (error) {
+    console.error("Error fetching data:", error);
   }
 }
 
-// Example usage:
-// addMenu("New Item", "Description", 10.99, "image-url");
+// Call the function to initiate fetching data after the DOM is loaded
+renderMenus();
