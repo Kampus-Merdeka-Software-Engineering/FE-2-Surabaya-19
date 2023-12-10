@@ -1,7 +1,11 @@
 const API_BASE_URL = "https://be-2-surabaya-19-production.up.railway.app";
 
 // Function to add item to cart
-async function addToCart(name, desc, price, image) {
+async function addMenus() {
+  const name = document.getElementById("name").value;
+  const price = document.getElementById("price").value;
+  const desc = document.getElementById("desc").value;
+  const image = document.getElementById("image").value;
   try {
     const response = await fetch(`${API_BASE_URL}/menus`, {
       method: "POST",

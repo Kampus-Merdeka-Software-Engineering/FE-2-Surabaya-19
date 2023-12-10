@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Menu</title>
+    <link rel="stylesheet" href="./css/tambah.css" />
+    <link rel="stylesheet" href="./css/styesheet.css" />
+  </head>
+  <body>
+    <header>
+      <!-- This div holds the hamburger icon -->
+      <div class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <!-- Your existing navbar -->
+      <div class="top-navbar">
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#special-menu">Special Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
+          <li id="order-btn">
+            <a href="./order.html" id="button-order">Order Now</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <h1>Add New Menu</h1>
+    <form>
+      <label for="foodName">Food Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" required /><br /><br />
+      <label for="description">Description:</label>
+      <textarea id="desc" name="desc" required></textarea><br /><br />
+      <label for="image">Image</label>
+      <input type="text" id="image" name="image" required /><br /><br />
+      <button onclick="addMenus()" type="submit">Add Menu</button>
+    </form>
+
+    <footer id="contact-us" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online order</h4>
+            <ul>
+              <li><a href="#">order now</a></li>
+              <li><a href="#">reserve room</a></li>
+              <li><a href="#">become a member</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a target="_blank" href="https://id-id.facebook.com/"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a target="_blank" href="https://twitter.com"
+                ><i class="fa fa-twitter"></i
+              ></a>
+              <a target="_blank" href="https://instagram.com"
+                ><i class="fa fa-instagram"></i
+              ></a>
+              <a target="" href="https://google.com"
+                ><i class="fa fa-google"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./js/script.js"></script>
+</html>
