@@ -27,12 +27,7 @@ async function fetchMenus() {
 }
 fetchMenus();
 
-async function addMenu() {
-  const name = document.getElementById("menu-name").value;
-  const desc = document.getElementById("menu-desc").value;
-  const price = document.getElementById("menu-price").value;
-  const image = document.getElementById("menu-image").value;
-
+async function addMenu(name, desc, price, image) {
   try {
     await fetch(`${API_BASE_URL}/menus`, {
       method: "POST",
@@ -44,6 +39,6 @@ async function addMenu() {
   } catch (err) {
     console.error(err);
   } finally {
-    fetchBooks();
+    fetchMenus();
   }
 }
