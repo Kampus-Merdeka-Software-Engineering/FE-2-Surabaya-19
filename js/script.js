@@ -11,6 +11,8 @@ async function addMenus() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST,PATCH,OPTIONS",
       },
       body: JSON.stringify({ name, desc, price, image }),
     });
